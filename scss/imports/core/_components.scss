@@ -1,0 +1,18 @@
+section {
+  height: 100vh;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-row-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

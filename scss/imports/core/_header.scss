@@ -1,0 +1,27 @@
+// css header
+header {
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  mix-blend-mode: difference;
+  background: $black-cl;
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  .logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    width: fit-content;
+    span {
+      &:nth-child(1) {
+        @include text(18px, ITBOLD, normal, $white-cl, none);
+      }
+      &:nth-child(2) {
+        @include text(12px, ITREGULAR, normal, $white-cl, none);
+      }
+    }
+  }
+}

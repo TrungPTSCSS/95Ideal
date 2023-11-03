@@ -1,0 +1,18 @@
+// css navigator (button)
+.nav {
+  display: flex;
+  height: 100%;
+  li {
+    padding: 0 10px;
+    height: 100%;
+    a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @include text(14px, ITBOLD, normal, $white-cl, none);
+    }
+    &:nth-last-child(1) {
+      padding-right: 0;
+    }
+  }
+}

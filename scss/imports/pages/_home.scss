@@ -1,0 +1,226 @@
+body {
+  h1 {
+    display: none;
+  }
+  .home {
+    section {
+      background: $black-cl;
+    }
+    &_mission {
+      &-background {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: $t;
+        img {
+          width: 100%;
+          height: 100%;
+          @include midimg();
+        }
+        &::before {
+          content: '';
+          background-color: $black-cl;
+          width: 100%;
+          height: 100%;
+          opacity: 0.4;
+          position: absolute;
+          z-index: 1;
+        }
+      }
+      &-main {
+        color: $white-cl;
+        text-align: center;
+        @include mid();
+        z-index: 3;
+        .title {
+          @include text(86px, ITBOLD, normal, $white-cl, none);
+          margin-bottom: 5px;
+        }
+        .content {
+          @include text(16px, ITREGULAR, normal, $white-cl, none);
+        }
+      }
+      &::before {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        bottom: 0;
+        content: '';
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          $black-cl 100%
+        );
+        z-index: 2;
+      }
+    }
+    &_criteria {
+      position: relative;
+      .wrapper {
+        color: $white-cl;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        position: absolute;
+        z-index: 2;
+      }
+      &-child {
+        padding: 0 45px;
+        padding-top: 60px;
+        height: 380px;
+        border-radius: $border-radius;
+        border: 2px solid #fff;
+        cursor: pointer;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.05) 100%
+        );
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        transition: $t;
+        img {
+          margin-bottom: 50px;
+          max-height: 130px;
+        }
+        .name {
+          @include text(32px, ITBOLD, normal, $white-cl, none);
+          margin-bottom: 10px;
+        }
+        .description {
+          @include text(16px, ITREGULAR, normal, $white-cl, none);
+        }
+        &:hover {
+          transform: scale(1.025);
+        }
+      }
+      .ball {
+        content: '';
+        border-radius: 100%;
+        position: absolute;
+        z-index: 1;
+        &:nth-child(2) {
+          width: 600px;
+          height: 600px;
+          left: 10vw;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #ffc700 0%,
+            rgba(255, 199, 0, 0) 100%
+          );
+        }
+        &:nth-child(3) {
+          width: 800px;
+          height: 800px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #0592fa 0%,
+            rgba(19, 143, 234, 0) 100%
+          );
+        }
+        &:nth-child(4) {
+          width: 600px;
+          height: 600px;
+          right: 10vw;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #f8077b 0%,
+            rgba(255, 0, 122, 0) 100%
+          );
+        }
+      }
+    }
+    &_team {
+      text-align: right;
+      &-title {
+        margin-bottom: 15px;
+        @include text(48px, ITBOLD, normal, $white-cl, none);
+      }
+      &-description {
+        @include text(18px, ITREGULAR, normal, $white-cl, none);
+      }
+      &-member {
+        text-align: left;
+        .image {
+          height: 400px;
+          position: relative;
+          border-radius: $border-radius;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            @include midimg();
+          }
+        }
+        .name {
+          padding-top: 15px;
+          @include text(24px, ITBOLD, normal, $white-cl, none);
+        }
+        .position {
+          padding-top: 5px;
+          @include text(16px, ITREGULAR, normal, #c6c6c6, none);
+        }
+      }
+      .avt-team {
+        margin-top: 60px;
+      }
+    }
+    &_blog {
+      color: white;
+      &-title {
+        text-align: center;
+        @include text(48px, ITBOLD, normal, $white-cl, none);
+        margin-bottom: 60px;
+      }
+      &-child {
+        padding: 20px;
+        border-radius: $border-radius;
+        border: 1px solid #2e2e2e;
+        background: #2e2e2e80;
+        backdrop-filter: blur(20px);
+        cursor: pointer;
+        .img {
+          margin-bottom: 30px;
+          width: 100%;
+          height: 273px;
+          position: relative;
+          border-radius: 8px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            @include midimg();
+          }
+          &::before{
+            position: absolute;
+            content: '';
+            background: $black-cl;
+            opacity: 0.2;
+            inset: 0;
+            z-index: 1;
+          }
+        }
+        .title {
+          padding: 0 10px;
+          @include text(18px, ITBOLD, normal, $white-cl, none);
+          margin-bottom: 10px;
+        }
+        .description {
+          padding: 0 10px;
+          height: 60px;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          word-wrap: break-word;
+          -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3;
+          -webkit-box-orient: vertical;
+          @include text(12px, ITREGULAR, 1.7em, #c6c6c6, none);
+        }
+      }
+    }
+  }
+}

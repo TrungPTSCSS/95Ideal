@@ -1,0 +1,8 @@
+// css footer
+@include xxs {
+}
+footer {
+  p {
+    @include text(16px, ITREGULAR, 30px, $black-cl, none);
+  }
+}
