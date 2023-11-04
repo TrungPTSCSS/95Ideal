@@ -16,7 +16,7 @@ module.exports = (grunt) => {
     uglify: {
       my_target: {
         files: {
-          '<%= dirs.dest %>/jsmain.min.js': ['<%= dirs.js %>/libs/*.js'],
+          '<%= dirs.dest %>/jsmain.min.js': ['<%= dirs.js %>/**/libs/*.js'],
         },
       },
     },

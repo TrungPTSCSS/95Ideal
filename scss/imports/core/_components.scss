@@ -2,17 +2,55 @@ section {
   height: 100vh;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
 .flex-row-center {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .flex-row-center-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  margin-bottom: 15px;
+  background: $white-cl;
+  border-radius: 8px;
+  border: none;
+  padding: 15px;
+  @include text(14px, ITREGULAR, normal, $black-cl, none);
+}
+.textarea {
+  width: 100%;
+  outline: none;
+  margin-bottom: 15px;
+  background: $white-cl;
+  border-radius: 8px;
+  border: none;
+  padding: 15px;
+  color: $white-cl;
+  @include text(14px, ITREGULAR, normal, $black-cl, none);
+}
+.button {
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background: $black-cl;
+  color: $white-cl;
+  cursor: pointer;
+  @include text(14px, ITREGULAR, normal, $white-cl, none);
+  transition: $t;
+  &:hover {
+    background: #262626;
+  }
 }

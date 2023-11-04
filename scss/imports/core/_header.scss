@@ -6,9 +6,9 @@ header {
   left: 0;
   top: 0;
   right: 0;
-  mix-blend-mode: difference;
-  background: $black-cl;
+  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 99;
   .logo {
     display: flex;
@@ -23,5 +23,43 @@ header {
         @include text(12px, ITREGULAR, normal, $white-cl, none);
       }
     }
+  }
+  .hidden-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition-delay: 0s;
+    transition-duration: $t;
+    background-color: $white-cl;
+    width: 100%;
+    height: 100vh;
+    &.active {
+      transform: translateX(0%);
+    }
+    .hidden-nav {
+      position: absolute;
+      @include mid();
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 40vh;
+      li {
+        transform: translateY(25px);
+        opacity: 0;
+        transition: $t;
+      }
+    }
+  }
+}
+.header-white {
+  background-color: rgba(255, 255, 255, 0.4);
+  .logo span,
+  .nav li a {
+    color: $black-cl !important;
+  }
+  .nav-mobile span {
+    background-color: $black-cl !important;
   }
 }

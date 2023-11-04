@@ -2,11 +2,15 @@ body {
   h1 {
     display: none;
   }
+  main {
+    overflow: hidden;
+  }
   .home {
     section {
       background: $black-cl;
     }
     &_mission {
+      position: relative;
       &-background {
         width: 100%;
         height: 100%;
@@ -74,8 +78,8 @@ body {
         cursor: pointer;
         background: linear-gradient(
           180deg,
-          rgba(255, 255, 255, 0.2) 0%,
-          rgba(255, 255, 255, 0.05) 100%
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.05) 100%
         );
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(20px);
@@ -169,7 +173,7 @@ body {
       }
     }
     &_blog {
-      color: white;
+      position: relative;
       &-title {
         text-align: center;
         @include text(48px, ITBOLD, normal, $white-cl, none);
@@ -179,13 +183,13 @@ body {
         padding: 20px;
         border-radius: $border-radius;
         border: 1px solid #2e2e2e;
-        background: #2e2e2e80;
+        background: #00000080;
         backdrop-filter: blur(20px);
         cursor: pointer;
         .img {
-          margin-bottom: 30px;
+          margin-bottom: 20px;
           width: 100%;
-          height: 273px;
+          height: 35vh;
           position: relative;
           border-radius: 8px;
           overflow: hidden;
@@ -193,8 +197,9 @@ body {
             width: 100%;
             height: 100%;
             @include midimg();
+            transition: $t;
           }
-          &::before{
+          &::before {
             position: absolute;
             content: '';
             background: $black-cl;
@@ -219,6 +224,106 @@ body {
           line-clamp: 3;
           -webkit-box-orient: vertical;
           @include text(12px, ITREGULAR, 1.7em, #c6c6c6, none);
+        }
+        &:hover {
+          .img img {
+            width: 110%;
+            height: 110%;
+          }
+        }
+      }
+      .container {
+        position: absolute;
+        z-index: 2;
+        width: 85%;
+      }
+      .ball {
+        content: '';
+        border-radius: 100%;
+        position: absolute;
+        z-index: 1;
+        &:nth-child(2) {
+          top: 20vh;
+          left: -10vw;
+          width: 60vw;
+          height: 80vh;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #ffc700 0%,
+            rgba(255, 199, 0, 0) 100%
+          );
+        }
+        &:nth-child(3) {
+          top: 20vh;
+          right: -10vw;
+          width: 80vw;
+          height: 80vh;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #f8077b 0%,
+            rgba(255, 0, 122, 0) 100%
+          );
+        }
+      }
+    }
+    &_contact {
+      position: relative;
+      overflow: hidden;
+      &-title {
+        @include text(48px, ITBOLD, normal, $white-cl, none);
+        margin-bottom: 15px;
+      }
+      &-sub {
+        @include text(18px, ITREGULAR, normal, $white-cl, none);
+        margin-bottom: 60px;
+      }
+      &-child {
+        border-radius: $border-radius;
+        border: 1px solid #2e2e2e;
+        background: #ffffff80;
+        backdrop-filter: blur(20px);
+        padding: 20px;
+        .image {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+          border-radius: 8px;
+          img {
+            width: 101%;
+            height: 100%;
+            position: absolute;
+            @include midimg();
+          }
+          &::before {
+            position: absolute;
+            z-index: 1;
+            content: '';
+            background-color: $black-cl;
+            opacity: 0.2;
+            inset: 0;
+          }
+        }
+      }
+      .container {
+        position: absolute;
+        z-index: 2;
+      }
+      .ball {
+        content: '';
+        border-radius: 100%;
+        position: absolute;
+        z-index: 1;
+        &:nth-child(2) {
+          width: 100vw;
+          height: 150vh;
+          // right: 10vw;
+          bottom: -50vh;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            #0592fa 0%,
+            rgba(19, 143, 234, 0) 100%
+          );
         }
       }
     }
