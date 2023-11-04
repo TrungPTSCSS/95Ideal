@@ -4,7 +4,4 @@ $(window).on('load', function () {
     $('.nav-mobile').toggleClass('active-nav');
   });
   $('.loading').fadeOut(1000);
-  setTimeout(() => {
-    AOS.init();
-  }, 1000);
 });
