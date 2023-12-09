@@ -1,8 +1,6 @@
-// css footer
-@include xxs {
-}
 footer {
-  p {
-    @include text(16px, ITREGULAR, 30px, $black-cl, none);
-  }
+  background: black;
+  text-align: left;
+  @include text(12px, ITREGULAR, 30px, $white-cl, none);
+  padding: 5px 20px;
 }
