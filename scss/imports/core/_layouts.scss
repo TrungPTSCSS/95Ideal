@@ -16,11 +16,10 @@
 html,
 body {
   width: 100%;
-  // height: 100vh;
   overflow-y: scroll;
   -ms-overflow-style: none;
   /* IE and Edge */
-  max-width: $container-max-width;
+  // max-width: $container-max-width;
   margin: auto;
   @include text($fz-text, $font-main, $lh-text, $text-cl, none);
   background: $white-cl;
