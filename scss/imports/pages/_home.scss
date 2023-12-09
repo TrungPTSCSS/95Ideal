@@ -70,8 +70,7 @@ body {
         z-index: 2;
       }
       &-child {
-        padding: 0 45px;
-        padding-top: 60px;
+        padding: 60px 45px 0;
         height: 380px;
         border-radius: $border-radius;
         border: 2px solid #fff;

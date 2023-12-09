@@ -15,12 +15,6 @@
 @mixin sm {
   @media screen and (max-width: $sm-max) {
     @content;
-    section .title-sub {
-      margin-left: 0;
-      &::before {
-        display: none;
-      }
-    }
   }
 }
 // mobile
