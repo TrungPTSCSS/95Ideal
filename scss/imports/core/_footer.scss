@@ -1,6 +1,6 @@
 footer {
   background: black;
-  text-align: left;
+  text-align: center;
   @include text(12px, ITREGULAR, 30px, $white-cl, none);
   padding: 5px 20px;
 }
