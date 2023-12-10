@@ -28,6 +28,8 @@ body {
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 
   .container {
     width: 100%;
@@ -99,12 +101,12 @@ body {
       max-width: $container-width;
     }
   }
-  
+
   // &/* width */
   ::-webkit-scrollbar {
     width: 0;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
     display: none;
   }
 
@@ -113,7 +115,6 @@ body {
     margin: auto;
     @include visible;
   }
-  
 
   @include lg {
     // CSS responsive large desktop
