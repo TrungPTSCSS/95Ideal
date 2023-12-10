@@ -100,7 +100,11 @@ body {
     }
   }
   
-  &::-webkit-scrollbar {
+  // &/* width */
+  ::-webkit-scrollbar {
+    width: 0;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
     display: none;
   }
 
