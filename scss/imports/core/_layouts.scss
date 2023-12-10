@@ -99,12 +99,17 @@ body {
       max-width: $container-width;
     }
   }
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .mainwrapper {
     width: 100%;
     margin: auto;
     @include visible;
   }
+  
 
   @include lg {
     // CSS responsive large desktop
